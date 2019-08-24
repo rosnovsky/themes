@@ -11,8 +11,8 @@ const EventsTemplate = () => {
                     id
                     name
                     location
-                    startDate
-                    endDate
+                    startDate(formatString: "MMMM DD, YYYY")
+                    endDate(formatString: "MMMM DD, YYYY")
                     slug
                     url
                 }
