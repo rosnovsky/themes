@@ -1,9 +1,9 @@
 const fs = require("fs");
 
 exports.onPreBootstrap = ({reporter }, options) => {
-    const contentPath = options.contentPath || "data";
+    const contentPath = options.contentPath || 'data';
 
-    if(!contentPath){
+    if(!fs.existsSync(contentPath)){
         reporter.info(`Creating the ${contentPath} directory`);
         fs.mkdirSync(contentPath);
     }
